@@ -16,8 +16,6 @@ class Constants {
     static final double SERVO_LEFT_MAXIMUM = 1;
     static final double SERVO_RIGHT_MINIMUM = 0;
     static final double SERVO_RIGHT_MAXIMUM = 1;
-    static final int SENSOR_NUMBER = 2;
     static final double WHITE_LINE_CODE = 0.10;
-    static int degreesError;
     static boolean cancelRequested = false;
 }

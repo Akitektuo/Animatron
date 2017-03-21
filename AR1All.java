@@ -18,7 +18,7 @@ public class AR1All extends LinearOpMode {
         robot.throwBalls(2000);
         robot.motorBallFrontStop();
         robot.motorMovementTurn(-68, false);
-        robot.motorMovementBackward(-0.5, 88);
+        robot.motorMovementBackward(-0.5, 83);
         robot.motorMovementTurn(67, true);
         robot.searchWhiteLine(0.3, true);
         robot.motorMovementBackward(-0.5, 90);
