@@ -1,9 +1,8 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamro028;
 
 import com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro;
 import com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cRangeSensor;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.CRServoImpl;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -16,22 +15,20 @@ import org.firstinspires.ftc.robotcore.external.Telemetry;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 import static java.lang.Math.abs;
-import static java.lang.String.valueOf;
 import static java.lang.Thread.sleep;
-import static org.firstinspires.ftc.teamcode.Constants.MOTOR_BACKWARD_MINIMUM;
-import static org.firstinspires.ftc.teamcode.Constants.MOTOR_FORWARD_MAXIMUM;
-import static org.firstinspires.ftc.teamcode.Constants.MOTOR_NUMBER;
-import static org.firstinspires.ftc.teamcode.Constants.MOTOR_STOP;
-import static org.firstinspires.ftc.teamcode.Constants.NUMBER_MOTORS_MOVEMENT;
-import static org.firstinspires.ftc.teamcode.Constants.SERVO_LEFT_MAXIMUM;
-import static org.firstinspires.ftc.teamcode.Constants.SERVO_LEFT_MINIMUM;
-import static org.firstinspires.ftc.teamcode.Constants.SERVO_NUMBER;
-import static org.firstinspires.ftc.teamcode.Constants.SERVO_RIGHT_MAXIMUM;
-import static org.firstinspires.ftc.teamcode.Constants.SERVO_RIGHT_MINIMUM;
-import static org.firstinspires.ftc.teamcode.Constants.TICKS_PER_ROTATION;
-import static org.firstinspires.ftc.teamcode.Constants.WHITE_LINE_CODE;
-import static org.firstinspires.ftc.teamcode.Constants.cancelRequested;
-import static org.firstinspires.ftc.teamcode.Constants.degreesError;
+import static org.firstinspires.ftc.teamro028.Constants.MOTOR_BACKWARD_MINIMUM;
+import static org.firstinspires.ftc.teamro028.Constants.MOTOR_FORWARD_MAXIMUM;
+import static org.firstinspires.ftc.teamro028.Constants.MOTOR_NUMBER;
+import static org.firstinspires.ftc.teamro028.Constants.MOTOR_STOP;
+import static org.firstinspires.ftc.teamro028.Constants.NUMBER_MOTORS_MOVEMENT;
+import static org.firstinspires.ftc.teamro028.Constants.SERVO_LEFT_MAXIMUM;
+import static org.firstinspires.ftc.teamro028.Constants.SERVO_LEFT_MINIMUM;
+import static org.firstinspires.ftc.teamro028.Constants.SERVO_NUMBER;
+import static org.firstinspires.ftc.teamro028.Constants.SERVO_RIGHT_MAXIMUM;
+import static org.firstinspires.ftc.teamro028.Constants.SERVO_RIGHT_MINIMUM;
+import static org.firstinspires.ftc.teamro028.Constants.TICKS_PER_ROTATION;
+import static org.firstinspires.ftc.teamro028.Constants.WHITE_LINE_CODE;
+import static org.firstinspires.ftc.teamro028.Constants.cancelRequested;
 
 /**
  * Created by Akitektuo on 05.02.2017.
@@ -250,7 +247,6 @@ class AnimatronRobot {
             heading = gyro.getIntegratedZValue();
         }
         motorMovementStop(500);
-        degreesError = gyro.getIntegratedZValue() - degrees;
     }
 
     void motorMovementTurn(int degrees) throws InterruptedException {

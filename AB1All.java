@@ -1,8 +1,6 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamro028;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-
-import static org.firstinspires.ftc.teamcode.Constants.degreesError;
 
 /**
  * Created by Akitektuo on 26-Jan-17.
