@@ -14,8 +14,9 @@ public class AB1All extends LinearOpMode {
         waitForStart();
         robot.changeStatus("Start.");
         robot.motorMovementTurn(45, false);
-        robot.motorMovementForward(0.5, 121);
-        robot.motorMovementTurn(-48, true);
+        robot.motorMovementForward(0.9, 128);
+        robot.changeStatus("Going 128 cm");
+        robot.motorMovementTurn(-45, true);
         robot.searchWhiteLine(-0.3, false);
         robot.motorMovementForward(0.5, 95);
         robot.searchWhiteLine(0.3, false);

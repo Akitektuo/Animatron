@@ -196,7 +196,7 @@ class AnimatronRobot {
             speedE = Range.clip(speedE, MOTOR_BACKWARD_MINIMUM, MOTOR_FORWARD_MAXIMUM);
             motorMovementLeft(speedW);
             motorMovementRight(speedE);
-            changeStatus("Motors encoders are at " + motorMinimum + " and going to " + (getDistance(cm) + startPosition));
+//            changeStatus("Motors encoders are at " + motorMinimum + " and going to " + (getDistance(cm) + startPosition));
         }
         for (int i = 0; i < NUMBER_MOTORS_MOVEMENT; i++) {
             motors[i].setMode(DcMotor.RunMode.RUN_USING_ENCODER);
