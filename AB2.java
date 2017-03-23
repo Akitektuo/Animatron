@@ -15,7 +15,7 @@ public class AB2 extends LinearOpMode {
         robot.changeStatus("Start.");
         robot.motorMovementTurn(45, true);
         robot.motorMovementStop(10000);
-        robot.motorMovementBackward(-0.5, 90);
+        robot.motorMovementBackward(-0.5, 75);
         robot.motorBallFrontIn(1);
         robot.throwBalls(4000);
         robot.motorBallFrontStop();
