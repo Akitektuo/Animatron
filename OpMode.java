@@ -1,10 +1,12 @@
 package org.firstinspires.ftc.teamro028;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import static org.firstinspires.ftc.teamro028.Constants.cancelRequested;
 
+@Disabled
 @TeleOp(name="Linear OpMode", group="OpMode")
 public class OpMode extends LinearOpMode {
     @Override

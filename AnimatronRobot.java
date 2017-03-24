@@ -16,6 +16,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 import static java.lang.Math.abs;
 import static java.lang.Thread.sleep;
+import static org.firstinspires.ftc.teamro028.Constants.APP_VERSION;
 import static org.firstinspires.ftc.teamro028.Constants.MOTOR_BACKWARD_MINIMUM;
 import static org.firstinspires.ftc.teamro028.Constants.MOTOR_FORWARD_MAXIMUM;
 import static org.firstinspires.ftc.teamro028.Constants.MOTOR_NUMBER;
@@ -49,6 +50,8 @@ class AnimatronRobot {
         this.opMode = opMode;
         this.telemetry = telemetry;
         initialize();
+        opMode.waitForStart();
+        changeStatus("Started");
     }
 
     void changeStatus(String status) {
@@ -115,7 +118,7 @@ class AnimatronRobot {
             sleep(50);
             opMode.idle();
         }
-        changeStatus("Initialized");
+        changeStatus("Initialized with version " + APP_VERSION);
     }
 
     void motorBallFrontIn(double power) {

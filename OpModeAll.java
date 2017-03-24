@@ -9,8 +9,6 @@ public class OpModeAll extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
         AnimatronRobot robot = new AnimatronRobot(this, telemetry);
-        waitForStart();
-        robot.changeStatus("Start.");
         while (opModeIsActive()) {
             //B
             if (gamepad1.b || gamepad2.b) {
@@ -77,7 +75,6 @@ public class OpModeAll extends LinearOpMode {
                 robot.captureBall();
             }
             telemetry.addData("Distance", robot.getDistanceFromWall());
-            telemetry.addData("Lift", robot.getStringEncoders());
             telemetry.update();
         }
     }

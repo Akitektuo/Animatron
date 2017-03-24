@@ -11,8 +11,6 @@ public class AR2 extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
         AnimatronRobot robot = new AnimatronRobot(this, telemetry);
-        waitForStart();
-        robot.changeStatus("Start.");
         robot.motorMovementTurn(-45, false);
         robot.motorMovementStop(10000);
         robot.motorMovementBackward(-0.5, 75);
