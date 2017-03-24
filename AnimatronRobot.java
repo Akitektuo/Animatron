@@ -392,8 +392,7 @@ class AnimatronRobot {
     }
 
     void searchWhiteLine(double power, boolean redTeam) throws InterruptedException {
-        int modifier = 1, target = 12;
-        double newPowerLeft, newPowerRight;
+        int modifier = 1;
         if (power > 0 && power > 0.9) {
             power = 0.9;
         } else if (power < 0 && power < -0.9) {
@@ -403,18 +402,15 @@ class AnimatronRobot {
             modifier = -modifier;
         }
         while (bottomSensor.getLightDetected() < WHITE_LINE_CODE && !opMode.isStopRequested()) {
-//            newPowerLeft = power - (target - rangeSensor.getDistance(DistanceUnit.CM)) / 50 * modifier;
-//            newPowerRight = power + (target - rangeSensor.getDistance(DistanceUnit.CM)) / 50 * modifier;
             motorMovementLeft(power);
             motorMovementRight(power);
-//            changeStatus(newPowerLeft + " " + newPowerRight);
         }
         motorMovementStop(50);
         while (bottomSensor.getLightDetected() < WHITE_LINE_CODE && !opMode.isStopRequested()) {
             motorMovementLeft(-0.1 * modifier);
             motorMovementRight(-0.1 * modifier);
         }
-        motorMovementStop(100);
+        motorMovementStop(200);
         useServoForColor(redTeam);
     }
 
