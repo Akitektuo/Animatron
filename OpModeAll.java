@@ -15,15 +15,9 @@ public class OpModeAll extends LinearOpMode {
                 robot.motorBallFrontStop();
             }
             //Stick
-            if (gamepad1.left_stick_button || gamepad2.left_stick_button) {
-                robot.motorMovementLeft(-gamepad2.left_stick_y);
-                robot.motorMovementRight(-gamepad2.right_stick_y);
-                robot.baseForkMove(-gamepad1.right_stick_y);
-            } else {
-                robot.motorMovementLeft(-gamepad1.left_stick_y);
-                robot.motorMovementRight(-gamepad1.right_stick_y);
-                robot.baseForkMove(-gamepad2.right_stick_y);
-            }
+            robot.motorMovementLeft(-gamepad1.left_stick_y);
+            robot.motorMovementRight(-gamepad1.right_stick_y);
+            robot.baseForkMove(-gamepad2.right_stick_y);
             //Triggers
             if (gamepad1.left_trigger > 0 || gamepad2.left_trigger > 0) {
                 robot.motorBallFrontOut(0.5);

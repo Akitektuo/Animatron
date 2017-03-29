@@ -13,7 +13,7 @@ public class AB1All extends LinearOpMode {
         AnimatronRobot robot = new AnimatronRobot(this, telemetry);
         robot.motorMovementForward(0.3, 30);
         robot.motorMovementTurn(68, false);
-        robot.motorMovementForward(0.5, 85);
+        robot.motorMovementForward(0.5, 80);
         robot.motorMovementTurn(-68, true);
         robot.searchWhiteLine(0.3, false);
         robot.motorMovementForward(0.5, 95);

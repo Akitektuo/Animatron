@@ -17,6 +17,6 @@ class Constants {
     static final double SERVO_RIGHT_MINIMUM = 0;
     static final double SERVO_RIGHT_MAXIMUM = 1;
     static final double WHITE_LINE_CODE = 0.10;
-    static final String APP_VERSION = "1.12";
+    static final String APP_VERSION = "1.17";
     static boolean cancelRequested = false;
 }

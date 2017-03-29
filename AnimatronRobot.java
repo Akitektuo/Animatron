@@ -93,7 +93,6 @@ class AnimatronRobot {
         motors[7].setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         motors[1].setDirection(DcMotorSimple.Direction.REVERSE);
         motors[3].setDirection(DcMotorSimple.Direction.REVERSE);
-        motors[4].setDirection(DcMotorSimple.Direction.REVERSE);
         motors[5].setDirection(DcMotorSimple.Direction.REVERSE);
         motors[7].setDirection(DcMotorSimple.Direction.REVERSE);
         motorStop();
@@ -108,6 +107,7 @@ class AnimatronRobot {
         servos[3].setDirection(Servo.Direction.REVERSE);
         servos[2].setPosition(Servo.MIN_POSITION);
         servos[3].setPosition(Servo.MIN_POSITION);
+        continuousServo.setDirection(DcMotorSimple.Direction.REVERSE);
         continuousServo.setPower(0);
         servoRetract();
         bottomSensor = opMode.hardwareMap.opticalDistanceSensor.get("sensorWhiteLine");
@@ -405,12 +405,12 @@ class AnimatronRobot {
             motorMovementLeft(power);
             motorMovementRight(power);
         }
-        motorMovementStop(50);
+        motorMovementStop(100);
         while (bottomSensor.getLightDetected() < WHITE_LINE_CODE && !opMode.isStopRequested()) {
             motorMovementLeft(-0.1 * modifier);
             motorMovementRight(-0.1 * modifier);
         }
-        motorMovementStop(200);
+        motorMovementStop(100);
         useServoForColor(redTeam);
     }
 
