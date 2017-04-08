@@ -299,32 +299,6 @@ class AnimatronRobot {
         servos[1].setPosition(SERVO_RIGHT_MINIMUM);
     }
 
-//    void testingSensors() throws InterruptedException {
-//        double readingFront, readingRear, optimalReadingFront = 2.30, optimalReadingRear = 1.21, speedLeft, speedRight;
-//        while (bottomSensor.getLightDetected() < WHITE_LINE_CODE && !opMode.isStopRequested()) {
-//            speedLeft = 0.3;
-//            speedRight = 0.3;
-//            readingFront = rangeSensor[0].getVoltage();
-//            readingRear = rangeSensor[1].getVoltage();
-//            if (abs(optimalReadingFront - readingFront) > abs(optimalReadingRear - readingRear)) {
-//                speedLeft += (optimalReadingFront - readingFront) / 7;
-//                speedRight -= (optimalReadingFront - readingFront) / 7;
-//            } else {
-//                speedLeft -= (optimalReadingRear - readingRear) / 7;
-//                speedRight += (optimalReadingRear - readingRear) / 7;
-//            }
-//            motorMovementLeft(speedLeft);
-//            motorMovementRight(speedRight);
-//            changeStatus("Left is " + rangeSensor[0].getVoltage() + "\nRight is " + rangeSensor[1].getVoltage());
-//        }
-//        Thread.sleep(50);
-//        while (bottomSensor.getLightDetected() < WHITE_LINE_CODE && !opMode.isStopRequested()) {
-//            motorMovementLeft(-0.1);
-//            motorMovementRight(-0.1);
-//        }
-//        motorMovementStop(500);
-//    }
-
     void useServoForColor(boolean redTeam) throws InterruptedException {
         if (redTeam && colorSensor.red() > colorSensor.blue()) {
             servoExtendLeft();
